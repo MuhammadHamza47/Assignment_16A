@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 16</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <script src="./script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Detail</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- !Font Awesome CDN link for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="header">
+      <h3>User's Details</h3>
+    </nav>
+    <div class="uper-btn">
+        <div class="left-box">
+            <button><i class="fa fa-plus"></i>&nbsp Add User</button>
+            <button><i class="fa fa-eraser"></i> &nbsp Clear Filtring</button>
+            <button><i class="fa fa-person"></i>&nbsp Login</button>
+        </div>
+        <div class="right-box">
+            <i class="fa fa-search"></i>
+            <input type="text" id="empId" placeholder="Enter user Id">
+            <button>Search</button>
+        </div>
+        
+    </div>
+    <div class="table-box">
+        <table>
+            <tr>
+                <th>Sr No</th>
+                <th>Profile</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Education</th>
+                <th>E-mail</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Hello word</td>
+                <td>Hello word</td>
+                <td>Hello word</td>
+                <td>Hello word</td>
+                <td>Hello word</td>
+                <td>Hello word</td>
+                <td>Hello word</td>
+                <td><button><i class="fa fa-eye"></i></button>
+                    <button style="background-color: #ee534e;"><i class="fa fa-trash"></i></button></td>
+            </tr>
+            
+        </table>
+    </div>
+    <div class="model">
+        <div class="left-model"><div class="img-box">
+            <img src="./person.jpg" width="130" height="130" alt="">
+            <i class="fa fa-plus"></i>
+            <input type="file">
+        </div></div>
+        <div class="right-model">
+            <div class="input-box">
+                <label for="id">Id</label>
+                <input type="text" id="id">
+            </div>
+        </div>
+    </div>
+  </body>
 </html>

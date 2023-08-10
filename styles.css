@@ -1,1 +1,161 @@
-/* style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    padding: 10px 30px;
+    background-color: aqua;
+}
+.header h3{
+    font-weight: bold;
+    font-family: Verdana;
+    font-size: 28px;
+    color: #fff;
+}
+/* uper-btn */
+.uper-btn{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+}
+.uper-btn .left-box{
+    width: 50%;
+    height: 100%;
+}
+.uper-btn .left-box button{
+    border: none;
+    outline: none;
+    background-color:aquamarine;
+    padding: 13px;
+    font-size: 18px;
+    font-family: vardana;
+    color: #fff;
+    margin: 0px 10px;
+}
+.uper-btn .right-box{
+    width: 50%;
+    height: 100%; 
+
+} 
+.uper-btn .right-box i {
+    font-size: 25px;
+    color: blue;
+    padding: 10px;
+}
+.uper-btn .right-box input{
+    width: 70%;
+    padding: 13px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid blue;
+    font-size: 18px;
+    font-family: vardana;
+    /* font-weight: bold; */
+}
+.uper-btn .right-box button{
+    border: none;
+    outline: none;
+    background-color:aquamarine;
+    padding: 13px;
+    font-size: 18px;
+    font-family: vardana;
+    color: #fff;
+    margin: 0px 10px;
+
+}
+/* table code */
+
+.table-box{
+    width: 100%;
+    padding: 30px;
+}
+.table-box table{
+    width: 100%;
+    /* border: 1px solid #ccc; */
+}
+.table-box table tr th{
+    border-right: 1px solid #ccc;
+    padding: 20px 0px 0px;
+    font-family: vardana;
+    border-bottom: solid 1px #ccc;
+}
+.table-box table tr td{
+    border-right: 1px solid #ccc; 
+    padding: 10px 0px 5px;
+    font-family: vardana;
+    text-align: center;
+    border-bottom: solid 1px #ccc;
+}
+.table-box table tr td button{
+    border: none;
+    width: 30%;
+    outline: none;
+    background-color:aquamarine;
+    font-size: 18px;
+    font-family: vardana;
+    color: #fff;
+    margin: 0px 10px;
+    padding: 5px; 
+}
+
+/* start model coding */
+
+.model{
+    width: 60%;
+    height: 500px;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    border-top: 20px groove #4286f5;
+}
+.model .left-model{
+    width: 30%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+.model .left-model .img-box{
+    width: 100%;
+    height: 300px;
+    
+    display: flex;
+    padding: 30px;
+    position: relative;
+}
+.model .left-model .img-box input{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    top : 80px;
+    opacity: 0;
+
+}
+.model .left-model .img-box img{
+    border-radius: 10px;
+}
+.model .left-model .img-box i{
+    font-size: 30px;
+    padding: 10px;
+    position: absolute;
+    right: 40px;
+    top : 80px;
+    color:aqua;
+ }
+.model .right-model{
+    width: 70%;
+    height: 100%;
+    border-left: groove 5px #4286f5;
+    background-color: #f2f2f2;
+
+}
+.model .right-model .input-box{
+    width: 100%;
+    display: flex;  
+    justify-content : space-between ;
+} 
