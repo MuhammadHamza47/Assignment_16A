@@ -104,7 +104,7 @@
 /* start model coding */
 
 .model{
-    width: 60%;
+    width: 0%;
     height: 500px;
     
     position: fixed;
@@ -113,6 +113,22 @@
     transform: translate(-50%, -50%);
     display: flex;
     border-top: 20px groove #4286f5;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.model.active{
+    opacity: 1;
+    z-index: 1;
+    width: 60%;
+}
+.close-icon{
+     position: absolute;
+     right: -25px;
+     top: -58px;
+     font-size: 30px;
+     padding: 10px;
+     color: #ee534f;
 }
 .model .left-model{
     width: 30%;
@@ -149,9 +165,10 @@
  }
 .model .right-model{
     width: 70%;
-    height: 100%;
+    height: auto;
     border-left: groove 5px #4286f5;
     background-color: #f2f2f2;
+    padding: 30px;
 
 }
 .model .right-model .input-box{
@@ -159,3 +176,33 @@
     display: flex;  
     justify-content : space-between ;
 } 
+.model .right-model .input-box label{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 20px 0px;
+}
+.model .right-model .input-box input{
+    width: 70%;
+    margin: 10px 0px;
+    border: none;
+    padding: 13px;
+    outline: none;
+    border-bottom: 3px solid #4286f5;
+    background-color: transparent;
+}
+.model .right-model .input-box button{
+    border: none;
+    width: 48%; 
+    outline: none;
+    background-color:aquamarine;
+    padding: 13px;
+    font-size: 18px;
+    font-family: vardana;
+    color: #fff;
+    margin: 10px 10px;
+ 
+}
+.model .right-model .input-box button:disabled{
+    filter: grayscale(70%);
+}

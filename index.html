@@ -13,62 +13,78 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
     <nav class="header">
       <h3>User's Details</h3>
     </nav>
     <div class="uper-btn">
-        <div class="left-box">
-            <button><i class="fa fa-plus"></i>&nbsp Add User</button>
-            <button><i class="fa fa-eraser"></i> &nbsp Clear Filtring</button>
-            <button><i class="fa fa-person"></i>&nbsp Login</button>
-        </div>
-        <div class="right-box">
-            <i class="fa fa-search"></i>
-            <input type="text" id="empId" placeholder="Enter user Id">
-            <button>Search</button>
-        </div>
-        
+      <div class="left-box">
+        <button id="add-btn"><i class="fa fa-plus"></i>&nbsp Add User</button>
+        <button><i class="fa fa-eraser"></i> &nbsp Clear Filtring</button>
+        <button><i class="fa fa-person"></i>&nbsp Login</button>
+      </div>
+      <div class="right-box">
+        <i class="fa fa-search"></i>
+        <input type="text" id="empId" placeholder="Enter user Id" />
+        <button>Search</button>
+      </div>
     </div>
     <div class="table-box">
-        <table>
-            <tr>
-                <th>Sr No</th>
-                <th>Profile</th>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Education</th>
-                <th>E-mail</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td>Hello word</td>
-                <td>Hello word</td>
-                <td>Hello word</td>
-                <td>Hello word</td>
-                <td>Hello word</td>
-                <td>Hello word</td>
-                <td>Hello word</td>
-                <td><button><i class="fa fa-eye"></i></button>
-                    <button style="background-color: #ee534e;"><i class="fa fa-trash"></i></button></td>
-            </tr>
-            
-        </table>
+      <table>
+        <tr>
+          <th>Sr No</th>
+          <th>Profile</th>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Education</th>
+          <th>E-mail</th>
+          <th>Action</th>
+        </tr>
+        <tbody id="table-data">
+        </tbody>
+      </table>
     </div>
     <div class="model">
-        <div class="left-model"><div class="img-box">
-            <img src="./person.jpg" width="130" height="130" alt="">
-            <i class="fa fa-plus"></i>
-            <input type="file">
-        </div></div>
-        <div class="right-model">
-            <div class="input-box">
-                <label for="id">Id</label>
-                <input type="text" id="id">
-            </div>
+      <i class="fa fa-times-circle close-icon"></i>
+      <div class="left-model">
+        <div class="img-box">
+          <img src="./person.jpg" id="profile-pic" width="130" height="130" alt="" />
+          <i class="fa fa-plus"></i>
+          <input type="file" id="upload-field" />
         </div>
+      </div>
+      <div class="right-model">
+       <form action="" id="registerform">
+        <div class="input-box">
+            <label for="id">Id</label>
+            <input type="tel" id="id" required/>
+          </div>
+          <div class="input-box">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="input-box">
+            <label for="age">Age</label>
+            <input type="text" id="age" required />
+          </div>
+          <div class="input-box">
+            <label for="education">Education</label>
+            <input type="text" id="educate" required />
+          </div>
+          <div class="input-box">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="input-box">
+            <button id="register-btn">Register</button
+            ><button disabled>Update</button>
+          </div>
+        </div>
+       </form>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
