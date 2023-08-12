@@ -1,4 +1,6 @@
 // start for control coding
+let registerForm = document.getElementById("registerform");
+let allInput = registerForm.querySelectorAll("INPUT");
 let addBtn = document.querySelector("#add-btn");
 let model = document.querySelector(".model");
 let closeBtn = document.querySelector(".close-icon");
@@ -6,24 +8,30 @@ addBtn.onclick = function () {
   model.classList.add("active");
   closeBtn.addEventListener("click", () => {
     model.classList.remove("active");
+    var i;
+    for(i = 0; i < allInput.length; i++){
+      allInput[i].value = "";
+    }
   });
 };
 
 // start all global veriable
 let userData = [];
+let profile_pic = document.getElementById("profile-pic");
+let uploadPic = document.getElementById("upload-field");
 var imgUrl;
-let registerBtn = document.querySelector("#register-btn");
 let idEl = document.getElementById("id");
 let nameEl = document.getElementById("name");
 let ageEl = document.getElementById("age");
 let educationEl = document.getElementById("educate");
 let emailEl = document.getElementById("email");
-let registerForm = document.getElementById("registerform");
+let registerBtn = document.querySelector("#register-btn");
+let updateBtn = document.querySelector("#update-btn");
 // end all global veriable
 
 // start sign up coding
 
-registerForm.onsubmit = function (e) {
+registerBtn.onclick = function (e) {
   e.preventDefault();
   registrationDate();
   getDataFromlocal();
@@ -65,7 +73,7 @@ const getDataFromlocal = () => {
           <td>${data.education}</td>
           <td>${data.email}</td>
           <td>
-            <button><i class="fa fa-eye"></i></button>
+            <button class="update-btn"><i class="fa fa-eye"></i></button>
             <button class="del-btn" style="background-color: #ee534e">
               <i class="fa fa-trash"></i></button>
           </td>
@@ -102,13 +110,51 @@ const getDataFromlocal = () => {
       });
     }
   }
+
+  // Start update coding
+  var allUpdateBtn  = document.querySelectorAll(".update-btn")
+  for(i = 0; i < allUpdateBtn.length; i++){
+     allUpdateBtn[i].onclick = function(){
+       var tr = this.parentElement.parentElement; 
+       var td = tr.getElementsByTagName("TD");
+       var index = tr.getAttribute("index");
+       var imgTag = td[1].getElementsByTagName("IMG");
+       var updateProfilePic = imgTag[0].src;
+       var id = td[2].innerHTML;
+       var name = td[3].innerHTML;
+       var age = td[4].innerHTML;
+       var education = td[5].innerHTML;
+       var email = td[6].innerHTML; 
+       addBtn.click();
+       registerBtn.disabled = true;
+       updateBtn.disabled = false; 
+       idEl.value = id;
+       nameEl.value = name;
+       ageEl.value = age;
+       educationEl.value = education;
+       emailEl.value = email;
+       profile_pic.src = updateProfilePic;
+       updateBtn.onclick = function(e){
+        userData[index] ={ 
+          id: idEl.value,
+    name: nameEl.value,
+    age: ageEl.value,
+    education: educationEl.value,
+    email: emailEl.value,
+    ProfilePic: uploadPic == "" ? profile_pic.src : imgUrl,
+        }
+        localStorage.setItem("userData", JSON.stringify(userData));
+       }
+        
+
+     }
+  }
 }
 getDataFromlocal();
 
 // img processing
 
-let profile_pic = document.getElementById("profile-pic");
-let uploadPic = document.getElementById("upload-field");
+
 uploadPic.onchange = function () {
   if (uploadPic.files[0].size < 1000000) {
     var fReader = new FileReader();
@@ -121,3 +167,37 @@ uploadPic.onchange = function () {
     alert("file size is to long");
   }
 };
+
+// start search coding
+
+var searchEl = document.querySelector("#empId");
+searchEl.oninput = function(){
+  searchFuc();
+}
+
+function searchFuc(){
+  var tr = tableData.querySelectorAll("TR");
+  var filter = searchEl.value.toLowerCase(); 
+  var i;
+  for(i=0; i<tr.length; i++){
+    var id = tr[i].getElementsByTagName("TD")[2].innerHTML;
+    var name = tr[i].getElementsByTagName("TD")[3].innerHTML;
+    var age = tr[i].getElementsByTagName("TD")[4].innerHTML;
+    var education = tr[i].getElementsByTagName("TD")[5].innerHTML;
+    var email = tr[i].getElementsByTagName("TD")[6].innerHTML;
+    
+    if(id.toLowerCase().indexOf(filter) > -1){
+      tr[i].style.display = "";
+    }else if(name.toLowerCase().indexOf(filter) > -1){
+      tr[i].style.display = "";
+    }else if(age.toLowerCase().indexOf(filter) > -1){
+      tr[i].style.display = "";
+    }else if(education.toLowerCase().indexOf(filter) > -1){
+      tr[i].style.display = "";
+    }else if(email.toLowerCase().indexOf(filter) > -1){
+      tr[i].style.display = "";
+    }else{
+      tr[i].style.display = "none";
+    }
+  }
+}

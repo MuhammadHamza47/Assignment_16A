@@ -22,8 +22,9 @@
     <div class="uper-btn">
       <div class="left-box">
         <button id="add-btn"><i class="fa fa-plus"></i>&nbsp Add User</button>
-        <button><i class="fa fa-eraser"></i> &nbsp Clear Filtring</button>
-        <button><i class="fa fa-person"></i>&nbsp Login</button>
+        <button><i class="fa fa-eraser"></i> &nbsp Clear All Data</button>
+        <input type="checkbox" id="del-all-box">
+        <!-- <button><i class="fa fa-person"></i>&nbsp Login</button> -->
       </div>
       <div class="right-box">
         <i class="fa fa-search"></i>
@@ -45,7 +46,7 @@
         </tr>
         <tbody id="table-data">
         </tbody>
-      </table>
+       </table>
     </div>
     <div class="model">
       <i class="fa fa-times-circle close-icon"></i>
@@ -80,7 +81,7 @@
           </div>
           <div class="input-box">
             <button id="register-btn">Register</button
-            ><button disabled>Update</button>
+            ><button id="update-btn" disabled>Update</button>
           </div>
         </div>
        </form>

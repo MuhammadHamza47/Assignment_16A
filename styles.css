@@ -24,6 +24,13 @@
 .uper-btn .left-box{
     width: 50%;
     height: 100%;
+    display: flex;
+    align-items: center;
+}
+.uper-btn .left-box input[type="checkbox"]{
+    width: 30px;
+    height: 30px;  
+    cursor: pointer;
 }
 .uper-btn .left-box button{
     border: none;
@@ -34,6 +41,7 @@
     font-family: vardana;
     color: #fff;
     margin: 0px 10px;
+    cursor: pointer;
 }
 .uper-btn .right-box{
     width: 50%;
@@ -64,6 +72,7 @@
     font-family: vardana;
     color: #fff;
     margin: 0px 10px;
+    cursor: pointer;
 
 }
 /* table code */
@@ -190,6 +199,7 @@
     outline: none;
     border-bottom: 3px solid #4286f5;
     background-color: transparent;
+    font-size: 18px ;
 }
 .model .right-model .input-box button{
     border: none;
