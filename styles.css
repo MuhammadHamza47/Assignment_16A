@@ -3,10 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: lightblue;
+}
 .header{
     width: 100%;
     padding: 10px 30px;
-    background-color: aqua;
+    background-color: rgb(86, 174, 228) ;
 }
 .header h3{
     font-weight: bold;
@@ -31,17 +34,19 @@
     width: 30px;
     height: 30px;  
     cursor: pointer;
+    /* border-radius: 10px; */
 }
 .uper-btn .left-box button{
     border: none;
     outline: none;
-    background-color:aquamarine;
+    background-color:rgb(86, 174, 228) ;
     padding: 13px;
     font-size: 18px;
     font-family: vardana;
     color: #fff;
     margin: 0px 10px;
     cursor: pointer;
+    border-radius: 10px;
 }
 .uper-btn .right-box{
     width: 50%;
@@ -50,7 +55,7 @@
 } 
 .uper-btn .right-box i {
     font-size: 25px;
-    color: blue;
+    color: rgb(56, 144, 199) ;
     padding: 10px;
 }
 .uper-btn .right-box input{
@@ -58,28 +63,36 @@
     padding: 13px;
     outline: none;
     border: none;
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid rgb(86, 174, 228) ;
     font-size: 18px;
     font-family: vardana;
+    border-radius: 10px;
     /* font-weight: bold; */
 }
 .uper-btn .right-box button{
     border: none;
     outline: none;
-    background-color:aquamarine;
+    background-color:rgb(86, 174, 228) ;
     padding: 13px;
     font-size: 18px;
     font-family: vardana;
     color: #fff;
     margin: 0px 10px;
     cursor: pointer;
+    border-radius: 10px;
 
 }
 /* table code */
 
 .table-box{
-    width: 100%;
+    width: 80%;
     padding: 30px;
+    background-color: white;
+    margin-left: 120px;
+    border-radius: 15px;
+    /* height: 400px; */
+    border-bottom: 5px solid rgb(86, 174, 228) ;
+    border-right: 3px solid rgb(86, 174, 228);
 }
 .table-box table{
     width: 100%;
@@ -102,7 +115,7 @@
     border: none;
     width: 30%;
     outline: none;
-    background-color:aquamarine;
+    background-color:rgb(86, 174, 228);
     font-size: 18px;
     font-family: vardana;
     color: #fff;
@@ -205,7 +218,7 @@
     border: none;
     width: 48%; 
     outline: none;
-    background-color:aquamarine;
+    background-color:rgb(86, 174, 228);
     padding: 13px;
     font-size: 18px;
     font-family: vardana;

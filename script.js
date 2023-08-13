@@ -144,6 +144,8 @@ const getDataFromlocal = () => {
     ProfilePic: uploadPic == "" ? profile_pic.src : imgUrl,
         }
         localStorage.setItem("userData", JSON.stringify(userData));
+        // e.preventDefault();
+
        }
         
 
@@ -201,3 +203,32 @@ function searchFuc(){
     }
   }
 }
+
+
+// start clear all data 
+  let delAllBtn = document.querySelector("#del-all-btn");
+  let delAllBox = document.querySelector("#del-all-box");
+  delAllBtn.addEventListener("click", ()=>{
+   if(delAllBox.checked == true){
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        localStorage.removeItem("userData");
+        window.location = location.href;
+        swal("Poof! Your imaginary file has been deleted!", {
+          icon: "success",
+        });
+      } else {
+        swal("Your imaginary file is safe!");
+      }
+    });
+    }else{
+      swal("Check The Box!", "Pleade check the box to delete data!", "warning");
+    }
+  })
