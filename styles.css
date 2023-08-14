@@ -48,6 +48,10 @@ body{
     cursor: pointer;
     border-radius: 10px;
 }
+.uper-btn .left-box button:hover{
+    background-color: white;
+    color: rgb(86, 174, 228);
+}
 .uper-btn .right-box{
     width: 50%;
     height: 100%; 
@@ -81,6 +85,10 @@ body{
     cursor: pointer;
     border-radius: 10px;
 
+}
+.uper-btn .right-box button:hover{
+    background-color: white;
+    color: rgb(86, 174, 228);
 }
 /* table code */
 
@@ -134,7 +142,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    border-top: 20px groove #4286f5;
+    border-top: 20px groove rgb(86, 174, 228);
     opacity: 0;
     z-index: -1;
     transition: 0.5s ease-in-out;
@@ -183,12 +191,12 @@ body{
     position: absolute;
     right: 40px;
     top : 80px;
-    color:aqua;
+    color:rgb(86, 174, 228);
  }
 .model .right-model{
     width: 70%;
     height: auto;
-    border-left: groove 5px #4286f5;
+    border-left: groove 5px rgb(86, 174, 228);
     background-color: #f2f2f2;
     padding: 30px;
 
@@ -210,7 +218,7 @@ body{
     border: none;
     padding: 13px;
     outline: none;
-    border-bottom: 3px solid #4286f5;
+    border-bottom: 3px solid rgb(86, 174, 228);
     background-color: transparent;
     font-size: 18px ;
 }
