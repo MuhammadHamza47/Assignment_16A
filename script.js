@@ -15,7 +15,7 @@ addBtn.onclick = function () {
   });
 };
 
-// start all global veriable
+// start all global veriable //
 let userData = [];
 let profile_pic = document.getElementById("profile-pic");
 let uploadPic = document.getElementById("upload-field");
@@ -80,7 +80,7 @@ const getDataFromlocal = () => {
         </tr>
         `;
   });
-  //    start deleting button
+  //    start deleting button //
   var i;
   var allDelBtn = document.querySelectorAll(".del-btn");
   for(i = 0; i < allDelBtn.length ; i++) {
