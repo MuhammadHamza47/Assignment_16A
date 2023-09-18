@@ -1,4 +1,4 @@
-// start for control coding
+// start for control coding.
 let registerForm = document.getElementById("registerform");
 let allInput = registerForm.querySelectorAll("INPUT");
 let addBtn = document.querySelector("#add-btn");
